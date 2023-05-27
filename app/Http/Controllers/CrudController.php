@@ -18,6 +18,7 @@ class CrudController extends Controller
         $data = $request->validate([
             'nama_karyawan' => 'required',
             'jabatan' => 'required',
+            'no_tlfn' => 'required',
         ]);
 
         $jabatan = $request->jabatan;
@@ -56,6 +57,7 @@ class CrudController extends Controller
         $data = request()->validate([
             'nama_karyawan' => 'required',
             'jabatan' => 'required',
+            'no_tlfn' => 'required',
         ]);
 
         $jabatan = request()->jabatan;

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('id_gaji');
             $table->string('nama_karyawan');
             $table->string('jabatan');
+            $table->string('no_tlfn');
             $table->integer('gaji');
             $table->integer('tunjangan');
             $table->integer('total_gaji');

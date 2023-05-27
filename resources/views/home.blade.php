@@ -6,12 +6,17 @@
         <div class="row">
             <div class="col-4">
                 <div class="card p-3 border-0 shadow-sm rounded-3">
-                    <h5 class="mb-3">Tambah data</h5>
+                    <h5 class="mb-3">Tambahkan data karyawan</h5>
                     <form action="/create" method="post">
                         @csrf
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Nama Karyawan</label>
                             <input type="text" class="form-control" name="nama_karyawan" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">No Tlfn</label>
+                            <input type="text" class="form-control" name="no_tlfn" id="exampleInputEmail1"
                                 aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
@@ -23,7 +28,8 @@
                                 <option value="Staff Lembaga">Staff Lembaga</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>
                 </div>
 
@@ -70,6 +76,7 @@
                                 <th scope="col">No</th>
                                 <th scope="col">Nama karyawan</th>
                                 <th scope="col">Jabatan</th>
+                                <th scope="col">No Telfon</th>
                                 <th scope="col">Gaji</th>
                                 <th scope="col">Tunjangan</th>
                                 <th scope="col">Total Gaji</th>
@@ -82,6 +89,7 @@
                                     <th scope="row">{{ $index + 1 }}</th>
                                     <td>{{ $item->nama_karyawan }}</td>
                                     <td>{{ $item->jabatan }}</td>
+                                    <td>{{ $item->no_tlfn }}</td>
                                     <td>Rp. @rupiah($item->gaji)</td>
                                     <td>Rp. @rupiah($item->tunjangan)</td>
                                     <td>Rp. @rupiah($item->total_gaji)</td>

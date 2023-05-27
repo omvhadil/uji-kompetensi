@@ -14,13 +14,19 @@
                                 name="nama_karyawan" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nama Telefon</label>
+                            <input type="text" class="form-control" value="{{ $data->no_tlfn }}" name="nama_karyawan"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Jabatan</label>
-                            <select class="form-select" name="jabatan" value="{{ $data->jabatan }}"
-                                aria-label="Default select example">
-                                <option selected>Jabatan</option>
-                                <option value="Kepala Lembaga">Kepala Lembaga</option>
-                                <option value="Kepala Bidang">Kepala Bidang</option>
-                                <option value="Staff Lembaga">Staff Lembaga</option>
+                            <select class="form-select" name="jabatan" aria-label="Default select example">
+                                <option value="Kepala Lembaga" {{ $data->jabatan == 'Kepala Lembaga' ? 'selected' : '' }}>
+                                    Kepala Lembaga</option>
+                                <option value="Kepala Bidang" {{ $data->jabatan == 'Kepala Bidang' ? 'selected' : '' }}>
+                                    Kepala Bidang</option>
+                                <option value="Staff Lembaga" {{ $data->jabatan == 'Staff Lembaga' ? 'selected' : '' }}>
+                                    Staff Lembaga</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
